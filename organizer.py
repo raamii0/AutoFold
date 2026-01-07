@@ -1,6 +1,7 @@
 import os
 import shutil
 from config import BASE_DIR, RULES
+from datetime import datetime
 
 def get_folder(ext):
     for folder, exts in RULES.items():
@@ -32,4 +33,12 @@ def organize():
             dst = get_unique_path(target_path, file)
 
             shutil.move(src, dst)
+            write_log(file, src, dst)
             print(f"[AutoFold] {file} 정리 완료")
+
+
+LOG_PATH = "logs/history.log"
+def write_log(filename, src, dst):
+    time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open(LOG_PATH, "a", encoding="utf-8") as log:
+        log.write(f"{time} | {filename} | {src} → {dst}\n")
