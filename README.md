@@ -44,15 +44,15 @@ AutoFold는 다운로드 폴더를 자동으로 정리해주는 파이썬 프로
 ### 1. Python으로 실행하기
 
 ```bash
-python main.py```
+python main.py
 
 실행 후 모드를 선택할 수 있습니다:
 
-```
+
 1. 미리보기
 2. 한 번만 정리
 3. 계속 자동 정리
-```
+
 
 ### 2. exe 파일로 실행 (빌드된 경우)
 
@@ -62,7 +62,7 @@ Python 설치 필요 없음
 ## 되돌리는 방법
 
 ```bash
-python undo.py```
+python undo.py
 
 마지막 정리 기록을 기준으로 한 번만 되돌릴 수 있습니다
 되돌린 후 로그는 초기화됩니다
@@ -71,11 +71,11 @@ python undo.py```
 
 ```bash
 pip install pyinstaller
-pyinstaller --onefile --name AutoFold main.py```
+pyinstaller --onefile --name AutoFold main.py
 
 결과물:
 ```text
-dist/AutoFold.exe```
+dist/AutoFold.exe
 
 ## 주의사항
 
